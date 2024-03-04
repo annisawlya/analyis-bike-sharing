@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 import numpy as np
 
-df = pd.read_csv('hour.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/annisawlya/analyis-bike-sharing/main/dashboard/hour.csv')
 
 # Title
 st.title('Analisis Penyewaan Sepeda')
@@ -18,7 +18,7 @@ st.markdown("""
 
 # Sidebar
 with st.sidebar:
-    st.image("Logo.jpg")
+    st.image("https://raw.githubusercontent.com/annisawlya/analyis-bike-sharing/main/dashboard/Logo.jpg")
 
     df.sort_values(by="date", inplace=True)
     df.reset_index(inplace=True)
@@ -42,7 +42,7 @@ with st.sidebar:
 # Set style seaborn
 sns.set(style='dark')
 
-df = pd.read_csv('hour.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/annisawlya/analyis-bike-sharing/main/dashboard/hour.csv')
 
 # Mengubah nama judul kolom
 df.rename(columns={'dteday': 'date', 'yr': 'year', 'mnth': 'month', 'hr': 'hour',
